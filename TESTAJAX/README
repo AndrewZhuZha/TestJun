@@ -1,0 +1,13 @@
+// ещё файл .htaccess, с помощью которого я делал редирект но он как пишет гит - скрыт. Пока не разобрался как это проверить, поэтому оставлю его сожержимое здесь 
+
+Redirect 301 /Register/user.json http://testajax/signup.html
+<IfModule dir_module>
+    DirectoryIndex index.php index.html
+</IfModule>
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html
+<FilesMatch "\.(html)$">
+   Header set Cache-Control: "no-cache, no-store"
+   Header unset ETag
+</FilesMatch>
+Header set X-Content-Type-Options nosniff
